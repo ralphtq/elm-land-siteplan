@@ -18,8 +18,7 @@ update msg model =
  case msg of
         None -> (model, None)
         LaunchModal text ->
-            Debug.log("LaunchModal")
-            -- (model, None)
+            Debug.log "LaunchModal"
             Effect.openWindowDialog text
               |> ( \_ -> (model, None))
 
@@ -47,7 +46,7 @@ viewSidebar =
                     , style "margin-top" "10px"
                     , style "color" "darkblue"
                     , style "font-family" "Cursive" ] 
-                    [ Html.text "EDGARD"  ]
+                    [ Html.text "Siteplan"  ]
                  ] 
             -- ]  
         , Html.a [ Attr.href "/"] [ Html.text "Home" ]

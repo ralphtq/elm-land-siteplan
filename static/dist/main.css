@@ -7,30 +7,30 @@
 }
 
 .edg-product-logo {
-  background-image: url("../assets/icons/headerContainer/TopQuadrant_Symbol_Full Color.svg");
+  background-image: url("../assets/icons/headerContainer/TQ_Symbol_Full Color.svg");
   background-size: contain;
   height: 45px;
   margin-left: 10px;
   margin-top: 20px;
 }
 
-.edgar {
+.edgard {
   align-items: stretch;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.edgar.header {
+.edgard.header {
   background-color: #46b5f1;
   color: #fff;
 }
 
-.edgar.header .title {
+.edgard.header .title {
   color: #fff;
 }
 
-.edgar.header .subtitle {
+.edgard.header .subtitle {
   color: rgba(255, 255, 255, 0.9);
 }
 

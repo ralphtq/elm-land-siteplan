@@ -1,15 +1,28 @@
 # elm-land-siteplan
 ## Templates for elm-land
 
-## Steps
+Siteplan is a template based on elm-land. The template follows the advice given at Working with JavaScript.
 
-### Run sass
+Instructions:
+
+Use is made of scss and the following command should be run to create 'main.css':
+sass -w assets/scss/main.scss static/dist/main.css
+Run 'elm-land server' and go to 'localhost:1234'
+Issue
+The Siteplan next to the logo should be clickable and open a dialog window.
+
+This currently is not working. The code that is failing is commented out in 'Sidebar.elm' on lines 42 and 51.
+
+This uses an 'onClick' to send the message 'LaunchModal', which, via 'update', invokes 'Effect.openWindowDialog', lines 90 to 96 in 'Effect.elm'.
+
+## Installation Steps
+
+1. Run sass
 
 > sass -w assets/scss/main.scss static/dist/main.css
 
-### Run elm-land server
+2. Run elm-land server
 
-Read the home page.
 
 
 

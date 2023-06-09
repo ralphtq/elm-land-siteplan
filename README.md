@@ -3,8 +3,6 @@
 
 Siteplan is a template based on elm-land. The template follows the advice given at Working with JavaScript.
 
-Instructions:
-
 Use is made of scss and the following command should be run to create 'main.css':
 sass -w assets/scss/main.scss static/dist/main.css
 Run 'elm-land server' and go to 'localhost:1234'

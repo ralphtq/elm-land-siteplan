@@ -1,0 +1,43 @@
+
+.edgar {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.edgar.header {
+    background-color: #46b5f1;
+    color: #fff;
+}
+
+.edgar.header .title {
+    color: #fff;
+}
+
+.edgar.header .subtitle {
+    color: rgba(255,255,255,.9);
+}
+
+.title:not(.is-spaced)+.subtitle {
+    margin-top: -1.25rem;
+}
+
+.subtitle.is-4 {
+    font-size: 1.5rem;
+}
+
+.subtitle {
+    color: #4a4a4a;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.title.is-1 {
+    color: #363636;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.125;
+}
+

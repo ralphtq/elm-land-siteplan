@@ -1,0 +1,61 @@
+
+.edgar {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.edgar.header {
+    background-color: #46b5f1;
+    color: #fff;
+}
+
+.edgar.header .title {
+    color: #fff;
+}
+
+.edgar.header .subtitle {
+    color: rgba(255,255,255,.9);
+}
+
+.title:not(.is-spaced)+.subtitle {
+    margin-top: -1.25rem;
+}
+
+.subtitle {
+    color: #4a4a4a;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.subtitle.is-2 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.125;
+}
+
+.subtitle.is-4 {
+    font-size: 1.5rem;
+}
+
+.text-centered {
+    text-align: center!important;
+}
+
+body {
+    padding: 32px;
+  }
+  
+.layout {
+    display: flex;
+    gap: 16px;
+  }
+  
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+

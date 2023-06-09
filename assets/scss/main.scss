@@ -1,0 +1,19 @@
+@import "./_colors.scss";
+@import "./_EDGstyles.scss";
+@import "./_EDGARD.scss";
+
+
+html, body {
+  // height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: $foreground;
+  background: $background;
+}

@@ -9,14 +9,18 @@
       "attributes": {
         "html": { "lang": "en" },
         "head": {}
-      },
-      "title": "Elm Land",
+       },
+      "base" : [{"href": "http://localhost:1234/assets/"}],
+      "title": "Elm-land Siteplan",
       "meta": [
         { "charset": "UTF-8" },
         { "http-equiv": "X-UA-Compatible", "content": "IE=edge" },
         { "name": "viewport", "content": "width=device-width, initial-scale=1.0" }
       ],
-      "link": [],
+      "link": [
+            { "rel": "stylesheet", "href": "/dist/css/bulma.min.css" } 
+          , { "rel": "stylesheet", "href": "/dist/main.css" }
+      ],
       "script": []
     },
     "router": {

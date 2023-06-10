@@ -1,4 +1,4 @@
-module Components.Sidebar exposing (view, viewSidebar)
+module Components.Sidebar exposing (view, viewSidebar, Msg)
 
 import Html exposing (Html)
 import Html.Attributes as Attr exposing (alt, class, src, style)
@@ -22,7 +22,7 @@ update msg model =
             Effect.openWindowDialog text
               |> ( \_ -> (model, None))
 
-view : { page : View msg } -> View msg
+view : { page : View Msg } -> View Msg
 view { page } =
     { title = page.title
     , body = 

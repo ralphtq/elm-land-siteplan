@@ -5,6 +5,8 @@ port module Effect exposing
     , openWindowDialog
     , pushRoute
     , replaceRoute
+    , signIn
+    , signOut
     , loadExternalUrl
     , map
     , toCmd
@@ -16,6 +18,9 @@ port module Effect exposing
 @docs none, batch
 @docs sendCmd, sendMsg
 @docs pushRoute, replaceRoute, loadExternalUrl
+
+@docs signIn, signOut
+@docs saveUser, clearUser
 
 @docs map, toCmd
 
@@ -131,7 +136,28 @@ loadExternalUrl : String -> Effect msg
 loadExternalUrl =
     LoadExternalUrl
 
+-- SHARED
 
+
+signIn :
+    { token : String
+    , id : String
+    , name : String
+    , profileImageUrl : String
+    , email : String
+    }
+    -> Effect msg
+signIn user =
+    SendSharedMsg (Shared.Msg.SignIn user)
+
+
+signOut : Effect msg
+signOut =
+    SendSharedMsg Shared.Msg.SignOut
+
+
+
+-- LOCAL STORAGE
 -- INTERNALS
 
 

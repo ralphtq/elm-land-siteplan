@@ -10,6 +10,7 @@ import View exposing (View)
 import Shared
 import Html exposing (..)
 import Effect exposing (Effect)
+import Layouts exposing (Sidebar)
 import Library.StringTransforms exposing (..)
 
 siteplanAbstract : String
@@ -41,17 +42,73 @@ siteplanAbstract = """
   <img src="/dist/images/siteplan-issue1.png" width="700px"/>
    """
 
-page : View msg
+type alias Model =
+    {}
+
+
+init : () -> ( Model, Effect Msg )
+init () =
+    ( {}
+    , Effect.none
+    )
+
+type Msg
+    = ExampleMsgReplaceMe
+
+
+update : Msg -> Model -> ( Model, Effect Msg )
+update msg model =
+    case msg of
+        ExampleMsgReplaceMe ->
+            ( model
+            , Effect.none
+            )
+
+
+
+-- SUBSCRIPTIONS
+
+
+subscriptions : Model -> Sub Msg
+subscriptions model =
+    Sub.none  
+page : Page Model Msg
 page =
-    Components.Sidebar.view
-   { page =
-      { title = "Elm Siteplan v1"
-    , body =
-        [ Html.div [ class "edgard header title text-centered" ]
-          [ Html.h1 [ class "title is-1" ] [ Html.text "Home Page" ]]
-          , Html.div [ class "container py-6 p-5" ]
-             [Html.div [style "margin-left" "20px"] <| textHtml siteplanAbstract
-             ]
-          ]    
+    Page.new
+        { init = init
+        , update = update
+        , subscriptions = subscriptions
+        , view = view
+        }
+        |> Page.withLayout (layout ) -- user)
+
+
+layout : Model -> Layouts.Layout
+layout model =
+    Layouts.Sidebar
+        { sidebar =
+            { title = "Elm Siteplan v1"
+            , user = "Me" -- user
+            }
+        }
+
+view : Model -> View Msg
+view model =
+    { title = "Dashboard"
+    , body = [ Html.text "/" ]
     }
-   }
+
+-- page : View msg
+-- page =
+--     Components.Sidebar.view
+--    { page =
+--       { title = "Elm Siteplan v1"
+--     , body =
+--         [ Html.div [ class "edgard header title text-centered" ]
+--           [ Html.h1 [ class "title is-1" ] [ Html.text "Home Page" ]]
+--           , Html.div [ class "container py-6 p-5" ]
+--              [Html.div [style "margin-left" "20px"] <| textHtml siteplanAbstract
+--              ]
+--           ]    
+--     }
+--    }

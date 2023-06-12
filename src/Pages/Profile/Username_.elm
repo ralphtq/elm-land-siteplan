@@ -8,9 +8,13 @@ import Route exposing (Route)
 import View exposing (View)
 import Effect exposing (Effect)
 
+type Msg
+    = SharedMsg Components.Sidebar.Msg
 
-page : { username : String } -> View msg
+
+page : { username : String } -> View Msg
 page params =
+    View.map SharedMsg <|
     Components.Sidebar.view
    { page =
       { title = "Elm Siteplan v1"
@@ -23,4 +27,7 @@ page params =
           ]    
     }
    }
+
+
+
 

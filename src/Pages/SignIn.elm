@@ -1,11 +1,31 @@
 module Pages.SignIn exposing (page)
 
+import Components.Sidebar
 import Html exposing (Html)
+import Html.Attributes exposing (alt, class, src, style)
+import Page exposing (Page)
+import Route exposing (Route)
 import View exposing (View)
+import Effect exposing (Effect)
+
+type Msg
+    = SharedMsg Components.Sidebar.Msg
 
 
-page : View msg
+page : View Msg
 page =
-    { title = "Pages.SignIn"
-    , body = [ Html.text "/sign-in" ]
+    View.map SharedMsg <|
+    Components.Sidebar.view
+   { page =
+      { title = "Elm Siteplan v1"
+    , body =
+        [ Html.div [ class "edgard header title text-centered" ]
+          [ Html.h1 [ class "title is-1" ] [ Html.text "Sign-In" ]]
+          , Html.div [ class "container py-6 p-5" ]
+             [Html.div [style "margin-left" "20px"] [Html.text "Sign-in Page"]
+             ]
+          ]    
     }
+   }
+
+

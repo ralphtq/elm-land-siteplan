@@ -32,7 +32,6 @@ siteplanAbstract = """
     The <span style="font-family:Cursive; font-weight: bold;">Siteplan</span> 
     next to the logo should be clickable and open a dialog window.</p>
   <p style="margin-top:20px;">This currently is not working.
-  The code that is failing is commented out in 'Sidebar.elm' on lines 42 and 51.
   </p>
   <p style="margin-top:20px;">This uses an 'onClick' to send the message 'LaunchModal',
   which, via 'update', invokes 'Effect.openWindowDialog', lines 90 to 96 in 'Effect.elm'.

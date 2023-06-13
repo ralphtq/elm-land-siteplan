@@ -12,7 +12,7 @@ This uses an 'onClick' to send the message 'LaunchModal', which, via 'update', i
 Elm error:
 
 
--- TYPE MISMATCH ---------------------------------------- .elm-land/src/Main.elm
+```-- TYPE MISMATCH ---------------------------------------- .elm-land/src/Main.elm
 
 Something is off with the 1st branch of this `case` expression:
 
@@ -25,7 +25,7 @@ This `page` value is a:
 But the type annotation on `viewPage` says it should be:
 
     View Msg
-
+```
 
 ## Installation Steps
 

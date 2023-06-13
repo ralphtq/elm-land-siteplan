@@ -9,8 +9,6 @@ Run 'elm-land server' and go to 'localhost:1234'
 Issue
 The Siteplan next to the logo should be clickable and open a dialog window.
 
-This currently is not working. The code that is failing is commented out in 'Sidebar.elm' on lines 42 and 51.
-
 This uses an 'onClick' to send the message 'LaunchModal', which, via 'update', invokes 'Effect.openWindowDialog', lines 90 to 96 in 'Effect.elm'.
 
 ## Installation Steps

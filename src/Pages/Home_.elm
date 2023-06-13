@@ -41,8 +41,13 @@ siteplanAbstract = """
   <img src="/dist/images/siteplan-issue1.png" width="700px"/>
    """
 
-page : View msg
+type Msg
+    = SharedMsg Components.Sidebar.Msg
+
+
+page : View Msg
 page =
+    View.map SharedMsg <|
     Components.Sidebar.view
    { page =
       { title = "Elm Siteplan v1"

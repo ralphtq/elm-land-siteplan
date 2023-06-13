@@ -41,11 +41,11 @@ siteplanAbstract = """
   <img src="/dist/images/siteplan-issue1.png" width="700px"/>
    """
 
-type Msg
+type HomeMsg
     = SharedMsg Components.Sidebar.Msg
 
 
-page : View Msg
+page : View HomeMsg
 page =
     View.map SharedMsg <|
     Components.Sidebar.view
